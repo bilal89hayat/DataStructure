@@ -17,7 +17,7 @@ public class ParentOfNode {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        findParent(node, 5);
+        findParent(node, 45);
         System.out.println("parent is : " + parent);
     }
 

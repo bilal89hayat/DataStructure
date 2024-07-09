@@ -3,6 +3,13 @@ package Tree;
 public class TreeDiameter {
 
     /*The diameter/width of a tree is defined as the number of nodes on the longest path between two end nodes.*/
+
+    /**
+     * We have to consider trees whose diameter passes through root and trees whose diameter does not pass through root.
+     */
+
+    //Diameter Of Tree = Left Height + Right Height +1
+
     public static void main(String[] args) {
 
         Node node = new Node(5);
@@ -19,6 +26,8 @@ public class TreeDiameter {
         node.left.right.right = new Node(45);
 
         int diameter = findDiameter(node);
+
+
         System.out.println("Diameter  " + diameter);
     }
 
@@ -31,10 +40,15 @@ public class TreeDiameter {
         int left = leftHeight(node.left);
         int right = rightHeight(node.right);
 
+        int leftDiameter = findDiameter(node.left);
+        int rightDiameter = findDiameter(node.right);
+
+        /*
         System.out.println("left " + left);
         System.out.println("right " + right);
+        */
 
-        return (left + right + 1);
+        return Math.max(left+right+1, Math.max(leftDiameter, rightDiameter));
     }
 
     private static int rightHeight(Node node) {
