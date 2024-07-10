@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class FindNode {
+public class InOrderTraversal {
 
     public static void main(String[] args) {
 
@@ -15,21 +15,17 @@ public class FindNode {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        findNode(node, 451);
-
+        inOrder(node);
     }
 
-    private static void findNode(Node node, int k) {
+    private static void inOrder(Node node) {
 
-        if (node == null){
-            return;
+        if(node == null){
+           return;
         }
 
-        if(node.val == k){
-            System.out.println("yes");
-        }
-        findNode(node.left, k);
-        findNode(node.right, k);
-
+        inOrder(node.left);
+        System.out.println(node.val);
+        inOrder(node.right);
     }
 }

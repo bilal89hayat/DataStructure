@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class InOrderTraversal {
+public class PreOrderTraversal {
 
     public static void main(String[] args) {
 
@@ -15,17 +15,16 @@ public class InOrderTraversal {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        inOrder(node);
+        preOrder(node);
     }
 
-    private static void inOrder(Node node) {
+    private static void preOrder(Node node) {
 
         if(node == null){
-           return;
+            return;
         }
-
-        inOrder(node.left);
-        System.out.println(node.val);
-        inOrder(node.right);
+        System.out.println(node.val + " ");
+        preOrder(node.left);
+        preOrder(node.right);
     }
 }

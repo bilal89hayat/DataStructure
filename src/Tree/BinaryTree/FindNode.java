@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class FindSiblings {
+public class FindNode {
 
     public static void main(String[] args) {
 
@@ -15,22 +15,21 @@ public class FindSiblings {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        findSiblings(node);
+        findNode(node, 451);
 
     }
 
-    private static Node findSiblings(Node node) {
+    private static void findNode(Node node, int k) {
 
-      if(node == null){
-         return null;
-      }
+        if (node == null){
+            return;
+        }
 
-      Node left = findSiblings(node.left);
-      Node right = findSiblings(node.right);
+        if(node.val == k){
+            System.out.println("yes");
+        }
+        findNode(node.left, k);
+        findNode(node.right, k);
 
-      if(left!=null && right!=null){
-          System.out.println("siblings : " +  left.val + " " + right.val);
-      }
-      return node;
     }
 }

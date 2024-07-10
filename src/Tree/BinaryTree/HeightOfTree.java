@@ -1,7 +1,9 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class DepthOfNode {
+public class HeightOfTree {
 
+    /*The height of the tree is the number of vertices in the tree from the root to the deepest node.
+    Note: The height of an empty tree is 0 and the height of a tree with single node is 1.*/
 
     public static void main(String[] args) {
 
@@ -17,30 +19,18 @@ public class DepthOfNode {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        System.out.println("depth is : " + findDepth(node, 70) ) ;
+        System.out.println("depth is : " + findHeight(node) ) ;
     }
 
-    private static int findDepth(Node node, int k) {
-
-        int depth = -1;
+    private static int findHeight(Node node) {
 
         if(node == null){
-          return -1;
-        }
-        if(node.val == k){
-           return depth + 1;
+           return 0;
         }
 
-        depth = findDepth(node.left, k);
-        if(depth >= 0){
-            return depth +1;
-        }
+        int left = findHeight(node.left) + 1;
+        int right = findHeight(node.right) + 1;
 
-        depth = findDepth(node.right, k);
-        if(depth >= 0){
-           return depth +1;
-        }
-
-        return depth;
+        return Math.max(left, right);
     }
 }
