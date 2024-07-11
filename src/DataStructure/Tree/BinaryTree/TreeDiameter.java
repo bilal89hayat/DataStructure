@@ -1,4 +1,4 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree;
 
 public class TreeDiameter {
 
@@ -8,7 +8,7 @@ public class TreeDiameter {
      * We have to consider trees whose diameter passes through root and trees whose diameter does not pass through root.
      */
 
-    //Diameter Of Tree = Left Height + Right Height +1
+    //Diameter Of DataStructure.Tree = Left Height + Right Height +1
 
     public static void main(String[] args) {
 

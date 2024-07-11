@@ -1,6 +1,8 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree.Traversal.Dfs;
 
-public class PreOrderTraversal {
+import DataStructure.Tree.BinaryTree.Node;
+
+public class PostOrderTraversal {
 
     public static void main(String[] args) {
 
@@ -15,16 +17,17 @@ public class PreOrderTraversal {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        preOrder(node);
+        postOrder(node);
     }
 
-    private static void preOrder(Node node) {
+    private static void postOrder(Node node) {
 
-        if(node == null){
+        if (node == null){
             return;
         }
-        System.out.println(node.val + " ");
-        preOrder(node.left);
-        preOrder(node.right);
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.val);
     }
 }

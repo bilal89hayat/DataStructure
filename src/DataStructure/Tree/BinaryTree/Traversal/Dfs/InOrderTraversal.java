@@ -1,4 +1,6 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree.Traversal.Dfs;
+
+import DataStructure.Tree.BinaryTree.Node;
 
 public class InOrderTraversal {
 

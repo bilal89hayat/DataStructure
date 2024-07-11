@@ -1,6 +1,6 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree;
 
-public class PostOrderTraversal {
+public class FindSiblings {
 
     public static void main(String[] args) {
 
@@ -15,17 +15,22 @@ public class PostOrderTraversal {
         node.right.right.right.right = new Node(70);
         node.left.right.right = new Node(45);
 
-        postOrder(node);
+        findSiblings(node);
+
     }
 
-    private static void postOrder(Node node) {
+    private static Node findSiblings(Node node) {
 
-        if (node == null){
-            return;
-        }
+      if(node == null){
+         return null;
+      }
 
-        postOrder(node.left);
-        postOrder(node.right);
-        System.out.println(node.val);
+      Node left = findSiblings(node.left);
+      Node right = findSiblings(node.right);
+
+      if(left!=null && right!=null){
+          System.out.println("siblings : " +  left.val + " " + right.val);
+      }
+      return node;
     }
 }

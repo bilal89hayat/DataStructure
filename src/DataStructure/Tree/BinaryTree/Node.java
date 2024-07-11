@@ -1,4 +1,4 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree;
 
 public class Node {
 

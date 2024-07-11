@@ -1,4 +1,6 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree.Traversal.Bfs;
+
+import DataStructure.Tree.BinaryTree.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;

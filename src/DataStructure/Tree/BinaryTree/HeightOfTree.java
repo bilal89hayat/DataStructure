@@ -1,4 +1,4 @@
-package Tree.BinaryTree;
+package DataStructure.Tree.BinaryTree;
 
 public class HeightOfTree {
 
@@ -7,7 +7,7 @@ public class HeightOfTree {
 
     public static void main(String[] args) {
 
-        //Create a Tree
+        //Create a DataStructure.Tree
         Node node = new Node(5);
         node.left = new Node(10);
         node.right = new Node(15);

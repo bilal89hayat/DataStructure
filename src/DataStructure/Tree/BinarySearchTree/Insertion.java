@@ -1,4 +1,4 @@
-package Tree.BinarySearchTree;
+package DataStructure.Tree.BinarySearchTree;
 
 public class Insertion {
 
