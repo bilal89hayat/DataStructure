@@ -1,4 +1,4 @@
-package DataStructure.Tree.BinaryTree.Traversal.Dfs;
+package DataStructure.Tree.BinaryTree.Traversal.DepthFirstSearch;
 
 import DataStructure.Tree.BinaryTree.Node;
 
