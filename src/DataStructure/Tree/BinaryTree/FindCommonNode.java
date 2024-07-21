@@ -1,4 +1,4 @@
 package DataStructure.Tree.BinaryTree;
 
-public class DepthOfBinaryTree {
+public class FindCommonNode {
 }
